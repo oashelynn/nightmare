@@ -63,7 +63,7 @@ const We1 = () => {
 						height={384}
 					/>
 				</div>
-				<div className="absolute top-[18690px] left-[26%] pointer-events-none">
+				<div className="absolute top-[18690px] left-[22%] pointer-events-none">
 					<Image
 						src="/about/circle.svg"
 						alt="bitcoin"
@@ -71,7 +71,7 @@ const We1 = () => {
 						height={724}
 					/>
 				</div>
-				<div className="absolute top-[18935px] right-[25%] pointer-events-none">
+				<div className="absolute top-[18935px] right-[19%] z-[-1] pointer-events-none">
 					<Image
 						src="/about/coins/tether-coin.png"
 						alt="bitcoin"
@@ -109,7 +109,7 @@ const We1 = () => {
 						height={832}
 					/>
 				</div>
-				<div className="absolute top-[19580px] right-[18%] pointer-events-none -z-1">
+				<div className="absolute top-[19580px] right-[21%] pointer-events-none -z-1">
 					<Image
 						src="/about/coins/sol.png"
 						alt="bitcoin"
