@@ -53,20 +53,17 @@ export default function Home() {
         {isLoading ? (
           <Loader />
         ) : (
-          <div className="w-screen overflow-hidden min-w-[500px]">
+          <>
             <Header />
-            {/* <HeaderOld>
-              <Menu />
-            </HeaderOld> */}
             <ProgressIndicator />
             {/* <Cursor isDesktop={isDesktop} /> */}
-            <main className="">
+            <main className="w-[100vw] overflow-hidden">
               <div className="fixed top-0 left-0 h-screen w-screen -z-1"></div>
-              {/* <Hero /> */}
-                <Title clientHeight={clientHeight} />
-                <Begin />
-                <Growth/>
-                <Logo/>
+              <Title clientHeight={clientHeight} />
+              <Begin />
+              <Growth/>
+              <Logo/>
+              {/* <div className="relative">
                 <Role/>
                 <We/>
                 <Token/>
@@ -74,10 +71,11 @@ export default function Home() {
                 <Reason/>
                 <Investors/>
                 <Future/>
+              </div> */}
             </main>
             <Footer />
             <Scripts />
-          </div>
+          </>
         )}
       </Meta>
     </>

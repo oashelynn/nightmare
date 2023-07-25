@@ -40,7 +40,7 @@ const Reason = () => {
 							It’s the first step of your new journey.
 						</p>
 					</div>
-					<div className="w-max h-full flex  justify-center items-start">
+					<div className="w-max h-max flex  justify-center items-start">
             <Image
               src="/reason/homebook 1.png"
               alt="homebook1"
@@ -76,7 +76,7 @@ const Reason = () => {
             alt="ellipse"
             width={2068}
             height={714}
-            className=""
+            className="flex m-auto"
           />
         </div>
         <div className="flex items-center gap-[30px] my-[84px] relative z-10">
@@ -90,7 +90,7 @@ const Reason = () => {
             alt="checkout2"
             width={685}
             height={515}
-            className="p-5  m-auto"
+            className="p-5 m-auto"
           />
           {/* <p className="bg-linear bg-clip-text text-transparent text-left pb-[150px]">
             Gamified product discovery
@@ -242,9 +242,9 @@ const Reason = () => {
           alt="team"
           width={360}
           height={378}
-          className="flex lg:m-0 m-auto"
+          className="lg:w-[360px] w-[200px] lg:h-[378px] h-[210px] lg:m-0 m-auto"
         />
-        <div className="text-left px-[48px]">
+        <div className="text-left justify-start px-[48px]">
           <h3  className="text-center lg:text-start text-[50px]">Luke Patterson</h3>
           <h5  className="text-center lg:text-start text-[28px] text-primary-purple">CEO (Co-Founder)</h5>
           <p className="font-medium text-[20px] w-full text-primary-graydark50">

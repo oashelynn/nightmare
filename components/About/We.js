@@ -99,7 +99,7 @@ const We = () => {
     </div>
     <div className="h-[2680px] w-3/5 border-b-[1px] border-secondary-graylight mx-auto -z-1" />
   </div>
-  <div className="pt-[120px] text-center">
+  <div className="my-[1200px] pt-[120px] text-center">
     <h2 className="text-[60px] leading-4">
       We are
     </h2>

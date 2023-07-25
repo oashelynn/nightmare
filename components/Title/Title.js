@@ -69,7 +69,7 @@ const Title = ({ clientHeight }) => {
           </p>
           <p className="text-[140px] flex justify-center">
             <span>pioneer</span>&nbsp;
-            <span id="owner" className="relative italic bg-linear bg-clip-text text-transparent w-max grid">
+            <span id="owner" className="relative italic bg-linear bg-clip-text text-transparent w-full grid">
               <span id="owner-the" className="">the</span>
               <span id="owner-your" className="">your</span>
             </span>

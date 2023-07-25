@@ -43,7 +43,7 @@ const Begin = ({isDesktop, clientHeight}) => {
                 {
                     y: window.innerHeight,
                     duration: 1,
-                }
+                },
             )
             .from(
                 rightPhone.current,
@@ -124,13 +124,13 @@ const Begin = ({isDesktop, clientHeight}) => {
             .fromTo(
                 topleftText.current,
                 { fontSize: 60, x: 0,       y: 0,       duration: 1, },
-                { fontSize: 20, opacity: 0,  x: -150,    y: 64 + 68, duration: 0.5, },
+                { fontSize: 20, opacity: 0,  x: -150,    y: 64 + 68, duration: 1, },
                 1
             )
             .fromTo(
                 toprightText.current,
                 { fontSize: 60, x: 0,   y: 0,       duration: 1, },
-                { fontSize: 20, opacity: 0,  x: 100, y: 64 + 68, duration: 0.5, },
+                { fontSize: 20, opacity: 0,  x: 100, y: 64 + 68, duration: 1, },
                 "<"
             );
         const scrollTrigger = ScrollTrigger.create({
@@ -148,14 +148,14 @@ const Begin = ({isDesktop, clientHeight}) => {
         revealsideText
             .fromTo(
                 leftsideText.current,
-                { fontSize: 0,  x: -150,    y: 100, duration: 1, },
-                { fontSize: 60, x: -400,    y: 0,   duration: 0.5,},
+                { fontSize: 0,  opacity: 0, x: -150,    y: 100, duration: 1, },
+                { fontSize: 60, opacity: 1, x: -400,    y: 0,   duration: 0.5,},
                 0.5
             )
             .fromTo(
                 rightsideText.current,
-                { fontSize: 0,  x: 80,  y: 70,  duration: 1, },
-                { fontSize: 60, x: 220, y: 0,   duration: 0.5, },
+                { fontSize: 0,  opacity: 0, x: 80,  y: 70,  duration: 1, },
+                { fontSize: 60, opacity: 1, x: 220, y: 0,   duration: 0.5, },
                 "<"
             )
             .to(

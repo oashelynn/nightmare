@@ -79,7 +79,7 @@ const Header = () => {
               height={100}
             />
           </a>
-          <button className="xl:px-[24px] xl:py-[14px] h-[48px] w-[48px] xl:w-max bg-primary-purple10 flex gap-[16px] rounded-[24px] xl:rounded-[8px]
+          <button className="xl:px-[24px] xl:py-[14px] h-[48px] w-[48px] xl:w-full bg-primary-purple10 flex gap-[16px] rounded-[24px] xl:rounded-[8px]
             font-bold text-primary-purple text-[18px] hover:bg-primary-purple50 transition-all justify-center items-center">
             <Image
               src="/cannabis.svg"

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const We1 = () => {
   return (
-		<div className="w-full text-center font-sysui my-[130px]">
+		<div className="w-full text-center font-sysui mt-[130px]">
 			<div>
 				<h2 className="text-[24px] leading-4 lg:text-[68px]">
 					We are
@@ -37,7 +37,7 @@ const We1 = () => {
 					</div>
 				</div>
 			</div>
-			<div className="h-[2000px]">
+			<div className="relative top-[-18480px] h-[2000px]">
 				<div className="absolute top-[18540px] left-[16%] pointer-events-none">
 					<Image
 						src="/about/coins/bitcoin.png"
@@ -172,8 +172,8 @@ const We1 = () => {
 					<p className="text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
 					<p className="text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
 				</div>
-				<div className="flex flex-col gap-[108px] my-[75px]">
-					<div className="flex gap-[45px] items-center justify-center w-max">
+				<div className="flex flex-col lg:gap-[108px] gap-4 my-[75px]">
+					<div className="flex lg:gap-[45px] gap-3 items-center justify-center w-full">
 						<Image
 							src="/about/budbo/Rectangle 120.jpg"
 							alt="leaderboard"
@@ -205,7 +205,7 @@ const We1 = () => {
 							height={200}
 						/>
 					</div>
-					<div className="flex gap-[45px] items-center justify-center w-max">
+					<div className="flex lg:gap-[45px] gap-3 items-center justify-center w-full">
 						<Image
 							src="/about/budbo/Rectangle 128.jpg"
 							alt="leaderboard"
@@ -237,7 +237,7 @@ const We1 = () => {
 							height={198}
 						/>
 					</div>
-					<div className="flex gap-[45px] items-center justify-center w-max">
+					<div className="flex lg:gap-[45px] gap-3 items-center justify-center w-full">
 						<Image
 							src="/about/budbo/Rectangle 134.jpg"
 							alt="leaderboard"
@@ -258,7 +258,7 @@ const We1 = () => {
 						/>
 					</div>
 					{/* 2 */}
-					<div className="flex gap-[45px] items-center justify-center w-max">
+					<div className="flex lg:gap-[45px] gap-3 items-center justify-center w-full">
 						<Image
 							src="/about/budbo/Screen Shot 2022-12-21 at 1.56 7.png"
 							alt="leaderboard"
@@ -278,7 +278,7 @@ const We1 = () => {
 							height={200}
 						/>
 					</div>
-					<div className="flex gap-[45px] items-center justify-center w-max">
+					<div className="flex lg:gap-[45px] gap-3 items-center justify-center w-full">
 						<Image
 							src="/about/budbo/Screen Shot 2022-12-21 at 1.57 3.png"
 							alt="leaderboard"
@@ -298,7 +298,7 @@ const We1 = () => {
 							height={184}
 						/>
 					</div>
-					<div className="flex gap-[45px] items-center overflow-hidden w-max">
+					<div className="flex lg:gap-[20px] gap-1 items-center overflow-hidden w-full">
 						<Image
 							src="/about/budbo/Screen Shot 2022-12-21 at 2.15 1.png"
 							alt="leaderboard"
@@ -312,13 +312,13 @@ const We1 = () => {
 							height={175}
 						/>
 						<Image
-							src="/about/budbo/Screen Shot 2022-12-21 at 1.56 2.png"
+							src="/about/budbo/Screen Shot 2022-12-21 at 1.56 2.png"	
 							alt="leaderboard"
 							width={691}
 							height={181}
 						/>
 					</div>
-					<div className="flex gap-[45px] items-center justify-center w-max">
+					<div className="flex mb-[-76px] lg:gap-[45px] gap-3 items-center justify-center w-full">
 						<Image
 							src="/about/budbo/Screen Shot 2022-12-21 at 1.54 3.png"
 							alt="leaderboard"

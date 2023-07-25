@@ -111,7 +111,7 @@ const Future = () => {
 			<h1 className="text-[58px] lg:text-[88px] my-[83px] text-center font-semibold">
 				Your future awaits...
 			</h1>
-			{/* <div  className="carousel flex flex-nowrap h-full w-[300%] justify-center items-center">
+			<div  className="carousel flex flex-nowrap h-full w-[300%] justify-center items-center">
 				{IMAGES.map((x,i) => (
 					<section className={`${x.id} ho0rizon`} >
 					<Image
@@ -123,12 +123,12 @@ const Future = () => {
 						className="object-cover"
 					/></section>
 				))}
-			</div> */}
+			</div>
 			<h2 className="text-[60px] font-semibold mt-[120px] mb-[90px]">Start your adventure.</h2>
 			<div className="flex justify-center">
 				 <div className="flex flex-col lg:h-[240px] w-1/2 flex-wrap justify-center">
 					{choices.map((choice, i) =>
-						<div className="flex gap-[22px] w-max items-center" key={"choice_"+i}>
+						<div className="flex gap-[22px] w-full items-center" key={"choice_"+i}>
 							<Lottie
 								animationData={animatedCheckbox}
 								style={{height: 75}}
@@ -154,13 +154,13 @@ const Future = () => {
 					hover:bg-primary-purple50 transition-all rounded-xl">I’m joining the Budbo Team</button>
 			</div>
 			<div className="-translate-y-full -z-1  lg:h-[375px] h-[232px">
-				<Image
+				{/* <Image
 					src="/investors/invest today.svg"
 					alt=""
 					width={3000}
 					height={375}
 					className="lg:h-[475px] h-[232px] w-[90%] m-auto"
-				/>
+				/> */}
 			</div>
 		</div>
   );
