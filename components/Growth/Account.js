@@ -85,7 +85,7 @@ export default function Acount () {
       </div>
       </div>
 
-      <div id="effects" className="w-screen">
+      <div id="effects" className="w-screen relative top-[-3380px]">
         <div className="absolute left-[250px] top-[2480px]">
           <Image
             src="/coin.svg"

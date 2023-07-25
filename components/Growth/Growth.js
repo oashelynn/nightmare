@@ -8,52 +8,7 @@ const Growth = () => {
       <h6 className="text-[80px] text-center mb-16" id="begin-precession">
         Explosive revenue growth
       </h6>
-
       <Account />
-
-      <div className="absolute left-[250px] top-[320px]">
-        <Image
-          src="/coin.svg"
-          alt="BUBO Coin"
-          width={100}
-          height={100}
-        />
-      </div>
-      <div className="absolute right-[220px] top-[620px] rotate-45 opacity-80">
-        <Image
-          src="/coin.svg"
-          alt="BUBO Coin"
-          width={80}
-          height={80}
-        />
-      </div>
-      <div className="absolute left-[200px] top-[920px] -rotate-45 opacity-30">
-        <Image
-          src="/coin.svg"
-          alt="BUBO Coin"
-          width={25}
-          height={25}
-        />
-      </div>
-      <div className="absolute right-[300px] top-[1020px] -rotate-45 opacity-30">
-        <Image
-          src="/coin.svg"
-          alt="BUBO Coin"
-          width={25}
-          height={25}
-        />
-      </div>
-      <h2 className="text-[100px] font-bold bg-linear bg-clip-text text-transparent
-      absolute left-[120px] top-[580px]">$</h2>
-      <h2 className="text-[100px] font-bold bg-linear bg-clip-text text-transparent
-      absolute right-[280px] top-[380px]">$</h2>
-      <h2 className="text-[80px] font-bold bg-linear bg-clip-text text-transparent
-      absolute right-[230px] top-[600px] opacity-80">$</h2>
-      <h2 className="text-[40px] font-bold bg-linear bg-clip-text text-transparent
-      absolute right-[370px] top-[780px] opacity-40">$</h2>
-      <h2 className="text-[30px] font-bold bg-linear bg-clip-text text-transparent
-      absolute left-[240px] top-[160px] opacity-20">$</h2>
-        
     </div>
     <div className="py-[300px] h-[1612px] font-normal leading-normal font-sysui text-center relative">
       <h1 className="text-[65px] mb-[143px]" id="saas-model">

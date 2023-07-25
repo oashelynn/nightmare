@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Token = () => {
   return (
-    <div className="flex justify-center py-[300px]">
+    <div className="relative flex justify-center py-[300px]">
         <div className="pointer-events-none">
             <Image
                 src="/about/token.png"
