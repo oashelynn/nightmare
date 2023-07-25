@@ -79,7 +79,7 @@ const Reason = () => {
             className="flex m-auto"
           />
         </div>
-        <div className="flex items-center gap-[30px] my-[84px] relative z-10">
+        <div className="flex justify-center gap-[30px] my-[84px] relative z-10">
           {/* <p className="bg-linear bg-clip-text text-transparent text-right pb-[150px]">
             Patent-pending technologies
             <br/>
@@ -90,7 +90,6 @@ const Reason = () => {
             alt="checkout2"
             width={685}
             height={515}
-            className="p-5 m-auto"
           />
           {/* <p className="bg-linear bg-clip-text text-transparent text-left pb-[150px]">
             Gamified product discovery
@@ -235,14 +234,14 @@ const Reason = () => {
         <span>Meet your new&nbsp;</span>
         <span className="bg-linear bg-clip-text text-transparent text-[128px]">Team</span>
       </h1>
-      <h2 className="lg:text-center text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
-      <div className="lg:flex w-full justify-center mb-[50px]">
+      <h2 className="lg:text-center   text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
+      <div className="relative lg:flex justify-center mb-[50px]">
         <Image
           src="/team/1_active.png"
           alt="team"
           width={360}
           height={378}
-          className="lg:w-[360px] w-[200px] lg:h-[378px] h-[210px] lg:m-0 m-auto"
+          className="lg:w-[360px] w-[108px] lg:h-[378px] h-[113px] flex m-auto"
         />
         <div className="text-left justify-start px-[48px]">
           <h3  className="text-center lg:text-start text-[50px]">Luke Patterson</h3>

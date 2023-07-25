@@ -9,10 +9,10 @@ export default function Acount () {
       <div>
         <h3 id="revenue-count" className="mt-[33px] text-[128px] font-bold italic">1,000+</h3>
         <Image
-          className="mt-[-25px] m-auto inset-0 z-[-1] object-cover"
+          className="mt-[-25px] m-auto inset-0 z-[-1] object-cover w-[720px] h-[66px]"
           src="/purple line.svg"
           alt="Purple Line"
-          width={508}
+          width={608}
           height={66}
         />
         <div id="revenue-description" className=" my-[-74px]">
@@ -28,7 +28,7 @@ export default function Acount () {
           className="mt-[-25px] m-auto inset-0 z-[-1] object-cover"
           src="/purple line.svg"
           alt="Purple Line"
-          width={523}
+          width={623}
           height={66}
       />
       <div id="revenue-description" className="my-[-74px]">

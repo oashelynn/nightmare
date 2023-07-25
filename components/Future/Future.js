@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Lottie from "lottie-react";
 import animatedCheckbox from "./checkbox.json"
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger, scrollTween } from "gsap/dist/ScrollTrigger";
+// import { useEffect, useRef } from "react";
+// import { gsap } from "gsap";
+// import { ScrollTrigger, scrollTween } from "gsap/dist/ScrollTrigger";
 
 
 const interactivity = {
@@ -115,7 +115,7 @@ const Future = () => {
 				{IMAGES.map((x,i) => (
 					<section className={`${x.id} ho0rizon`} >
 					<Image
-						key={x.src+"_"+i}
+						key={x.id+"_"+i}
 						src={x.src}
 						alt="Purple Line"
 						width={x.w}
