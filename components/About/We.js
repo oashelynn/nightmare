@@ -123,52 +123,6 @@ const We = () => {
             <span>through monthly recurring revenue model</span>
           </div>
         </div>
-        <div>
-          <div id="effects" className="w-screen">
-            <div className="absolute left-[250px] top-[12780px]">
-              <Image
-                src="/coin.svg"
-                alt="BUBO Coin"
-                width={100}
-                height={100}
-              />
-            </div>
-            <div className="absolute right-[220px] top-[13080px] rotate-45 opacity-80">
-              <Image
-                src="/coin.svg"
-                alt="BUBO Coin"
-                width={80}
-                height={80}
-              />
-            </div>
-            <div className="absolute left-[200px] top-[13380px] -rotate-45 opacity-30">
-              <Image
-                src="/coin.svg"
-                alt="BUBO Coin"
-                width={25}
-                height={25}
-              />
-            </div>
-            <div className="absolute right-[300px] top-[13480px] -rotate-45 opacity-30">
-              <Image
-                src="/coin.svg"
-                alt="BUBO Coin"
-                width={25}
-                height={25}
-              />
-            </div>
-            <h2 className="text-[100px] font-bold bg-linear bg-clip-text text-transparent
-            absolute left-[120px] top-[12880px]">$</h2>
-            <h2 className="text-[100px] font-bold bg-linear bg-clip-text text-transparent
-            absolute right-[280px] top-[12680px]">$</h2>
-            <h2 className="text-[80px] font-bold bg-linear bg-clip-text text-transparent
-            absolute right-[230px] top-[12900px] opacity-80">$</h2>
-            <h2 className="text-[40px] font-bold bg-linear bg-clip-text text-transparent
-            absolute right-[370px] top-[13080px] opacity-40">$</h2>
-            <h2 className="text-[30px] font-bold bg-linear bg-clip-text text-transparent
-            absolute left-[240px] top-[13460px] opacity-20">$</h2>
-          </div>
-        </div>
         <Acount />
       </div>
     </div>
