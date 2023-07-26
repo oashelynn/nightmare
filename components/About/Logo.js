@@ -50,12 +50,12 @@ const Logo = () => {
       revealPhoneTimeline8 && revealPhoneTimeline8.progress(1);
     }
 
-  },[wrapperRef])
+  }, [wrapperRef])
 
   const stopScreen = () => {
     const stopScreenTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     stopScreenTimeline
-      .to( wrapperRef.current, { x: 0 } );
+      .to(wrapperRef.current, { x: 0 });
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
       start: "bottom bottom",
@@ -69,10 +69,10 @@ const Logo = () => {
 
   const revealLogo = () => {
     const logoX = (window.innerHeight - logoRef.current.clientHeight) / 2;
-    const revealLogoTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone} });
+    const revealLogoTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     revealLogoTimeline
       .from(
-        logoRef.current, 
+        logoRef.current,
         {
           opacity: 0,
           width: 0,
@@ -82,10 +82,10 @@ const Logo = () => {
       );
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
-			start: "bottom bottom",
-			end: "100%",
-			scrub: 0,
-			animation: revealLogoTimeline,
+      start: "bottom bottom",
+      end: "100%",
+      scrub: 0,
+      animation: revealLogoTimeline,
     })
     return [revealLogoTimeline, scrollTrigger];
   }
@@ -96,8 +96,8 @@ const Logo = () => {
       .fromTo(
         phone_1.current[e],
         {
-          translateX: 500,
-          translateY: -500,
+          translateX: 400,
+          translateY: -400,
           opacity: 1,
           transformOrigin: "100% 100%",
           rotationZ: 45,
@@ -108,7 +108,7 @@ const Logo = () => {
           transformOrigin: "100% 100%",
           rotationZ: 45,
         },
-        e*2
+        e * 2
       )
       .fromTo(
         phone_1.current[e],
@@ -168,11 +168,11 @@ const Logo = () => {
     <div ref={wrapperRef} className="text-center relative h-[100vh] w-[100vw] flex justify-center items-center">
       <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[200px]">
         <Image
-            src="/logo.svg"
-            alt="Logo"
-            width={560}
-            height={585}
-            className="m-auto"
+          src="/logo.svg"
+          alt="Logo"
+          width={560}
+          height={585}
+          className="m-auto"
         />
       </div>
       {/* <div id="logo-text" className=" mx-auto  mb-[120px]">
