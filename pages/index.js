@@ -22,6 +22,7 @@ import Footer from "@/components/Footer/Footer";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import WeTop from "@/components/About/WeTop";
 import FutureCarousel from "@/components/Future/FutureCarousel";
+import Budbo from "@/components/About/Budbo";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -69,6 +70,7 @@ export default function Home() {
               <Token />
               <WeTop />
               <We1 />
+              <Budbo />
               <Reason />
               <Investors />
               <FutureCarousel />

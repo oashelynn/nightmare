@@ -53,7 +53,7 @@ const FutureCarousel = () => {
 
   const containerRef = useRef(null);
   const imagesRef = useRef(null);
-  const textRef = useRef(null);
+  // const textRef = useRef(null);
 
   useEffect(() => {
     const [carouselTimeline, scrollTrigger] = Carousel();
@@ -84,7 +84,7 @@ const FutureCarousel = () => {
 
   return (
     <div ref={containerRef} className="bg-black text-white p-5 pb-[200px] text-center font-sysui h-[100vh] flex flex-col w-[100vw] overflow-hidden">
-      <h1 ref={textRef} className="text-[58px] lg:text-[88px] text-center font-semibold my-auto">
+      <h1 className="text-[58px] lg:text-[88px] text-center font-semibold my-auto">
         Your future awaits...
       </h1>
       <div ref={imagesRef} className="flex flex-nowrap w-[200%] items-stretch">
