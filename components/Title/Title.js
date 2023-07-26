@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap, Linear } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
@@ -41,23 +41,21 @@ const Title = ({ clientHeight }) => {
           duration: 1,
         }
       );
-      const scrollTrigger = ScrollTrigger.create({
-        trigger: targetSection.current,
-        start: "bottom bottom",
-        end: "200%",
-        scrub: 0,
-        pin: true,
-        animation: stopTimeline,
-      });
-      return [stopTimeline, scrollTrigger];
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: targetSection.current,
+      start: "bottom bottom",
+      end: "200%",
+      scrub: 0,
+      pin: true,
+      animation: stopTimeline,
+    });
+    return [stopTimeline, scrollTrigger];
   }
 
   return (
     <section className="w-full h-[100vh] relative select-none" ref={targetSection}>
       <div
-        className={`${
-          clientHeight > 650 ? "py-80" : "py-72"
-        } section-container`}
+        className={"py-80 section-container"}
       >
         <h1
           ref={quoteRef}

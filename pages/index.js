@@ -20,6 +20,8 @@ import Future from "@/components/Future/Future";
 import Footer from "@/components/Footer/Footer";
 // import Saas from "@/components/Saas/Saas";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import WeTop from "@/components/About/WeTop";
+import FutureCarousel from "@/components/Future/FutureCarousel";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -53,27 +55,24 @@ export default function Home() {
         {isLoading ? (
           <Loader />
         ) : (
-          <div className="w-screen overflow-hidden min-w-[500px]">
+          <div className="w-screen overflow-hidden min-w-[460px]">
             <Header />
-            {/* <HeaderOld>
-              <Menu />
-            </HeaderOld> */}
             <ProgressIndicator />
             {/* <Cursor isDesktop={isDesktop} /> */}
             <main className="">
-              <div className="fixed top-0 left-0 h-screen w-screen -z-1"></div>
-              {/* <Hero /> */}
-                <Title clientHeight={clientHeight} />
-                <Begin />
-                <Growth/>
-                <Logo/>
-                <Role/>
-                <We/>
-                <Token/>
-                <We1/>
-                <Reason/>
-                <Investors/>
-                <Future/>
+              <Title />
+              <Begin />
+              <Growth />
+              <Logo />
+              <Role />
+              <We />
+              <Token />
+              <WeTop />
+              <We1 />
+              <Reason />
+              <Investors />
+              <FutureCarousel />
+              <Future />
             </main>
             <Footer />
             <Scripts />
