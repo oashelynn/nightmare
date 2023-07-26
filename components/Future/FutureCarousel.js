@@ -91,7 +91,7 @@ const FutureCarousel = () => {
         {IMAGES.map((x, i) => (
           <section >
             <Image
-              key={"carousel_" + i}
+              key={"carousel_" + x.id}
               src={x.src}
               alt="Purple Line"
               width={x.w}
@@ -103,7 +103,7 @@ const FutureCarousel = () => {
         {IMAGES.map((x, i) => (
           <section >
             <Image
-              key={"carousel_2_" + i}
+              key={"carousel_2_" + x.id}
               src={x.src}
               alt="Purple Line"
               width={x.w}

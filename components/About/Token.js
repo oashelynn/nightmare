@@ -30,13 +30,13 @@ const Token = () => {
           duration: 1
         }
       );
-    // .to(
-    //   imgRef.current,
-    //   {
-    //     opacity: 0,
-    //     duration: 0.5
-    //   }
-    // );
+    //   .to(
+    //     imgRef.current,
+    //     {
+    //       opacity: 0,
+    //       duration: 0.5
+    //     }
+    //   );
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
       start: "bottom bottom",
@@ -55,6 +55,7 @@ const Token = () => {
           alt="budbo token"
           width={404}
           height={404}
+          key={'token'}
         />
       </div>
     </div>
