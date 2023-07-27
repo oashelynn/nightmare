@@ -117,7 +117,7 @@ const Reason = () => {
           <h1 className="text-[70px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
             Business intelligence.
           </h1>
-          <div className="text-[#97979A] text-[24px] font-medium lgtext-center py-[5px]">
+          <div className="text-[#97979A] text-[24px] font-medium lg:text-center py-[5px]">
             <span>Built by dispensaries for dispensaries, Budbo‘s retailer dashboard and key analytics <br /></span>&nbsp;
             <span className="bg-linear bg-clip-text text-transparent italic" >empower</span>&nbsp;
             <span>our dispensary clients to sell more products with pro-active decision making.</span>
@@ -154,13 +154,13 @@ const Reason = () => {
             <span>dispensaries, Budbo has explosive opportunities for monthly recurring revenue growth from dispensaries, retailers, product manufacturers, brands, and growers. </span>
           </div>
         </div>
-        <div className="py-[10x0px]">
-          <h1 className="text-[64px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-left">
+        <div className="">
+          <h1 className="text-[64px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] text-center">
             Problem solver.
             <br />
             Industry evolver.
           </h1>
-          <div className="lg:flex justify-center items-start my-[40px] w-full">
+          <div className="lg:flex justify-center items-end my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
               <div className="w-[543px] lg:w-[1085px]">
                 <Image
@@ -180,7 +180,7 @@ const Reason = () => {
                 />
               </div>
             </div>
-            <div className="lg:translate-x-[-170px] lg:mt-0 mt-10 lg:px-0 px-5">
+            <div className="lg:translate-x-[-120px] lg:mt-0 mt-10 lg:px-0 px-5">
               <div className="text-[18px] font-medium lg:mb-[150px]">
                 Visibility into the entire cannabis supply chain from
                 <br />
@@ -216,7 +216,7 @@ const Reason = () => {
             Budbo is managed by an incredibly experienced team, with executives from Google, Comcast, NetSpend, Harvard trained doctors, cannabis industry veterans, and seasoned financial executives with extensive merger and acquisition experience as well as IPO/Public exit experience.
           </div>
           <Team />
-          <p className="text-[17px] text-center">Battle tested and forged in fire</p>
+          <p className="text-[17px] mt-3 text-center">Battle tested and forged in fire</p>
         </div>
       </div>
       <div className="w-full bg-reason lg:after:py-[85px]">
@@ -225,16 +225,17 @@ const Reason = () => {
           <span className="bg-linear bg-clip-text text-transparent text-[128px]">Team</span>
         </h1>
         <h2 className="lg:text-center   text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
-        <div className="relative lg:flex justify-center mb-[50px] object-cover">
-          <div className="lg:w-[360px] w-[108px] lg:h-[378px] h-[113px] flex m-auto  object-cover">
+        <div className="relative flex justify-center mb-[50px]">
+          <div className="w-1/5 flex m-auto">
             <Image
               src="/team/1_active.png"
               alt="team"
+              objectFit="contain"
               width={360}
               height={378}
             />
           </div>
-          <div className="text-left justify-start px-[48px]">
+          <div className="w-4/5 text-left justify-start px-[48px]">
             <h3 className="text-center lg:text-start text-[50px]">Luke Patterson</h3>
             <h5 className="text-center lg:text-start text-[28px] text-primary-purple">CEO (Co-Founder)</h5>
             <p className="font-medium text-[20px] w-full text-primary-graydark50">

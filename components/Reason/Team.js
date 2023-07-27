@@ -46,20 +46,21 @@ const members = [
 
 const Team = () => {
   return (
-    <div className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0">
-      {members.map(i => <div  key={'client_'+i.file} className="">
-        <Image
-          src={`/team/${i.file}.png`}
-          alt="team"
-          width={135}
-          height={140}
-        />
-        <div className="text-[14px] font-semibold leading-[20px] -translate-y-full bg-linearblack">
-          <span>{i.name}</span>
-          <br/>
-          <span className="text-primary-purple text-[12px]">{i.role}</span>
+    <div className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0 text-center">
+      {members.map(i =>
+        <div key={'client_' + i.file} className="">
+          <Image
+            src={`/team/${i.file}.png`}
+            alt="team"
+            width={135}
+            height={140}
+          />
+          <div className="text-[14px] font-semibold leading-[20px] bg-linearblack text-center flex flex-col">
+            <span>{i.name}</span>
+            <span className="text-primary-purple text-[12px]">{i.role}</span>
+          </div>
         </div>
-      </div>)}
+      )}
     </div>
   );
 };
