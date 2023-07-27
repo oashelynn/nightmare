@@ -7,7 +7,7 @@ class MyDocument extends Document {
           <link rel="manifest" href="/manifest.json" />
           <link rel="apple-touch-icon" href="/icon.png" />
           <meta name="theme-color" content="#7000FF" />
-          <script src="https://cdn.tailwindcss.com"></script>
+          {/* <script src="https://cdn.tailwindcss.com"></script> */}
         </Head>
         <body>
           <Main />

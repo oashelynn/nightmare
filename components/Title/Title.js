@@ -30,7 +30,7 @@ const Title = ({ clientHeight }) => {
           opacity: 0,
           duration: 1,
         },
-        "<"
+        1
       )
       .to(
         quoteRef.current.querySelector("#owner-the"),

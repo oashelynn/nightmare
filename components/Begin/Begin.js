@@ -42,6 +42,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 				leftPhone.current,
 				{
 					y: window.innerHeight,
+					opacity: 0,
 					duration: 1,
 				},
 			)
@@ -49,6 +50,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 				rightPhone.current,
 				{
 					y: window.innerHeight,
+					opacity :0,
 					duration: 1,
 				},
 				"<"

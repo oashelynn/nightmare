@@ -28,10 +28,10 @@ export default function Budbo() {
     const percent = window.innerWidth >= 1000 ? "300%" : "600%";
 
     carouselTimeline
-      .to(imgRef.current, { x: -(carouselTextX), duration: 1 })
-      .to(img2Ref.current, { x: carouselTextX, duration: 1 }, "<")
-      .from(phoneRef.current, { y: height, duration: 0.3 })
-      .to(phoneRef.current, { bottom: -10, duration: 0.3 });
+      .to(imgRef.current, { x: -(carouselTextX), duration: 5 })
+      .to(img2Ref.current, { x: carouselTextX, duration: 5 }, "<")
+      .from(phoneRef.current, { y: height, duration: 2 })
+      .to(phoneRef.current, { bottom: -10, duration: 2 });
 
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
