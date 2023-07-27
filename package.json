@@ -1,7 +1,7 @@
 {
   "private": true,
   "engines": {
-    "node": "desired_version"
+    "node": "16.20.1"
   },
   "scripts": {
     "dev": "next dev",
