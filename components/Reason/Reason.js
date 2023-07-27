@@ -24,7 +24,7 @@ const Reason = () => {
           Reason #1 – Not another Cannabis startup; Budbo is a technology company that has built the ecosystem that benefits dispensaries, growers, manufacturers, couriers, patients, and consumers.
         </p>
         <div className="flex flex-wrap space-y-8 content-center">
-          <div className="lg:flex  w-max items-start">
+          <div className="lg:flex  w-full items-start">
             <div className="mb-8 lg:text-center">
               <p className="bg-linear bg-clip-text text-transparent font-bold text-[52px] leading-none pb-[40px]">
                 Your future.<br />
@@ -40,7 +40,7 @@ const Reason = () => {
                 It’s the first step of your new journey.
               </p>
             </div>
-            <div className="w-max h-max flex  justify-center items-start">
+            <div className="w-full h-max flex  justify-center items-start">
               <Image
                 src="/reason/homebook 1.png"
                 alt="homebook1"
@@ -121,7 +121,7 @@ const Reason = () => {
             <span className="bg-linear bg-clip-text text-transparent italic" >empower</span>&nbsp;
             <span>our dispensary clients to sell more products with pro-active decision making.</span>
           </div>
-          <div className="lg:flex justify-center items-start my-[40px] w-max">
+          <div className="lg:flex justify-center items-start my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
               <Image
                 src="/reason/connectbook5 1.png"
@@ -130,13 +130,13 @@ const Reason = () => {
                 height={564}
                 className="w-[700px] lg:w-[1178px]"
               />
-              <div className="absolute translate-x-[-140px] translate-y-[15px]">
+              <div className="absolute translate-x-[-140px] translate-y-[15px] w-[130px] lg:w-[212px]">
                 <Image
                   src="/reason/connectphone 1.png"
                   alt="connectphone"
                   width={212}
                   height={427}
-                  className="w-[130px] lg:w-[212px]"
+                  className=""
                 />
               </div>
             </div>
@@ -159,22 +159,23 @@ const Reason = () => {
             <br />
             Industry evolver.
           </h1>
-          <div className="lg:flex justify-center items-start my-[40px] w-max">
+          <div className="lg:flex justify-center items-start my-[40px] w-full">
             <div className="flex overflow-hidden items-end justify-end">
-              <Image
-                src="/reason/traxbook 1.png"
-                alt="traxbook"
-                width={1085}
-                height={520}
-                className="w-[543px] lg:w-[1085px]"
-              />
-              <div className="absolute translate-x-[-140px] translate-y-[15px]">
+              <div className="w-[543px] lg:w-[1085px]">
+                <Image
+                  src="/reason/traxbook 1.png"
+                  alt="traxbook"
+                  width={1085}
+                  height={520}
+                />
+              </div>
+              <div className="absolute translate-x-[-140px] translate-y-[15px] w-[110px] lg:w-[163px]">
                 <Image
                   src="/reason/traxchain 1.png"
                   alt="traxchain"
                   width={163}
                   height={330}
-                  className="w-[110px] lg:w-[163px]"
+                  className=""
                 />
               </div>
             </div>
@@ -236,13 +237,14 @@ const Reason = () => {
         </h1>
         <h2 className="lg:text-center   text-[32px] mb-[60px]">Experience. Vision. Passion.</h2>
         <div className="relative lg:flex justify-center mb-[50px] object-cover">
-          <Image
-            src="/team/1_active.png"
-            alt="team"
-            width={360}
-            height={378}
-            className="lg:w-[360px] w-[108px] lg:h-[378px] h-[113px] flex m-auto  object-cover"
-          />
+          <div className="lg:w-[360px] w-[108px] lg:h-[378px] h-[113px] flex m-auto  object-cover">
+            <Image
+              src="/team/1_active.png"
+              alt="team"
+              width={360}
+              height={378}
+            />
+          </div>
           <div className="text-left justify-start px-[48px]">
             <h3 className="text-center lg:text-start text-[50px]">Luke Patterson</h3>
             <h5 className="text-center lg:text-start text-[28px] text-primary-purple">CEO (Co-Founder)</h5>

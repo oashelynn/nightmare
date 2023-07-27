@@ -1,6 +1,6 @@
 import { Linear, gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import Image from "next/dist/client/image";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 
 
@@ -10,6 +10,7 @@ export default function Budbo() {
   const wrapperRef = useRef(null);
   const imgRef = useRef(null);
   const img2Ref = useRef(null);
+  const phoneRef = useRef(null);
 
   useEffect(() => {
     const [carouselTimeline, scrollTrigger] = Carousel();
@@ -22,16 +23,19 @@ export default function Budbo() {
 
   const Carousel = () => {
     const carouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } })
-    const carouselTextX = imgRef.current.clientWidth - window.innerWidth
+    const carouselTextX = imgRef.current.clientWidth - window.innerWidth + 1440
+    const height = wrapperRef.current.clientHeight - phoneRef.current.clientHeight;
 
-    carouselTimeline.to(imgRef.current, { x: -(carouselTextX), duration: 1 })
-
-    carouselTimeline.to(img2Ref.current, { x: carouselTextX, duration: 1 }, "<")
+    carouselTimeline
+      .to(imgRef.current, { x: -(carouselTextX), duration: 1 })
+      .to(img2Ref.current, { x: carouselTextX, duration: 1 }, "<")
+      .from(phoneRef.current, { y: height, duration: 0.3 })
+      .to(phoneRef.current, { bottom: -10, duration: 0.3 });
 
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
       start: 'bottom bottom',
-      end: '500%',
+      end: '300%',
       scrub: 0,
       pin: true,
       animation: carouselTimeline,
@@ -54,7 +58,7 @@ export default function Budbo() {
         <p className="text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
         <p className="text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
       </div>
-      <div className="flex flex-col lg:gap-[108px] gap-4 my-[75px]">
+      <div className="flex flex-col lg:gap-[108px] gap-4">
         <div ref={imgRef} className="flex lg:gap-[45px] gap-3 items-center justify-center w-[360%]">
           <Image
             src="/about/budbo/Rectangle 120.jpg"
@@ -207,24 +211,8 @@ export default function Budbo() {
             width={210}
             height={198}
           />
-
-
-
-
         </div>
-        {/* <div className="flex lg:gap-[45px] gap-3 items-center justify-center w-full">
-          
-        </div>
-        <div className="flex lg:gap-[45px] gap-3 items-center justify-center w-full">
-          
-        </div>
-        <div className="flex lg:gap-[45px] gap-3 items-center justify-center w-full">
-         
-        </div>
-        <div className="flex lg:gap-[20px] gap-1 items-center overflow-hidden w-full">
-         
-        </div> */}
-        <div className="flex mb-[-76px] lg:gap-[45px] gap-3 items-center justify-center">
+        <div ref={phoneRef} className="absolute bottom-[-10px] left-0 right-0 items-end justify-center mb-0 pb-0">
           <Image
             src="/about/puff 4.png"
             alt="leaderboard"

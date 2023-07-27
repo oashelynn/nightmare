@@ -74,7 +74,7 @@ const FutureCarousel = () => {
     const scrollTrigger = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: "400%",
+      end: "200%",
       scrub: 0,
       pin: true,
       animation: carouselTimeline,
@@ -83,7 +83,7 @@ const FutureCarousel = () => {
   }
 
   return (
-    <div ref={containerRef} className="bg-black text-white p-5 pb-[200px] text-center font-sysui h-[100vh] flex flex-col w-[100vw] overflow-hidden">
+    <div ref={containerRef} className="bg-black text-white p-5 pb-[200px] text-center font-sysui lg:h-[100vh] h-full flex flex-col w-full overflow-hidden">
       <h1 className="text-[58px] lg:text-[88px] text-center font-semibold my-auto">
         Your future awaits...
       </h1>

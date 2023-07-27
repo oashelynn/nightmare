@@ -44,7 +44,7 @@ const Title = ({ clientHeight }) => {
     const scrollTrigger = ScrollTrigger.create({
       trigger: targetSection.current,
       start: "bottom bottom",
-      end: "200%",
+      end: "100%",
       scrub: 0,
       pin: true,
       animation: stopTimeline,
