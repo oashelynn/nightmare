@@ -7,13 +7,7 @@ const Logo = () => {
   const wrapperRef = useRef(null);
   const logoRef = useRef(null);
   const phone_1 = useRef([]);
-  // const phone_2 = useRef(null);
-  // const phone_3 = useRef(null);
-  // const phone_4 = useRef(null);
-  // const phone_5 = useRef(null);
-  // const phone_6 = useRef(null);
-  // const phone_7 = useRef(null);
-  // const phone_8 = useRef(null);
+  const logoTextRef = useRef(null);
 
   useEffect(() => {
     const [stopScreenTimeline, stopScreenScrollTrigger] = stopScreen();
@@ -77,13 +71,34 @@ const Logo = () => {
           opacity: 0,
           width: 0,
           height: 0,
-          duration: 1,
+          duration: 5,
         }
+      )
+      .to(
+        logoRef.current,
+        {
+          width: 250,
+          duration: 3,
+        },
+        11
+      )
+      .fromTo(
+        logoTextRef.current,
+        {
+          opacity: 0,
+          translateY: 250,
+        },
+        {
+          opacity: 1,
+          translateY: 300,
+          duration: 3,
+        },
+        "<"
       );
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
       start: "bottom bottom",
-      end: "100%",
+      end: "240%",
       scrub: 0,
       animation: revealLogoTimeline,
     })
@@ -93,20 +108,15 @@ const Logo = () => {
   const revealPhone = (e) => {
     const revealPhoneTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
     revealPhoneTimeline
-      .fromTo(
+      .from(
         phone_1.current[e],
         {
-          translateX: 400,
-          translateY: -400,
+          x: 500,
+          y: 1500,
           opacity: 1,
           transformOrigin: "100% 100%",
-          rotationZ: 45,
-        },
-        {
-          translateX: 0,
-          translateY: 0,
-          transformOrigin: "100% 100%",
-          rotationZ: 45,
+          duration: 2,
+          rotateZ: 45,
         },
         e * 2
       )
@@ -114,12 +124,12 @@ const Logo = () => {
         phone_1.current[e],
         {
           transformOrigin: "100% 100%",
-          rotationZ: 45,
+          rotationZ: 0,
         },
         {
           transformOrigin: "50% 50%",
           rotationZ: -45,
-          duration: 2,
+          duration: 1,
         }
       )
       .to(
@@ -150,14 +160,43 @@ const Logo = () => {
         phone_1.current[e],
         {
           transformOrigin: "50% 50%",
-          rotationZ: -360,
-          duration: 4,
+          rotationZ: -380,
+          duration: 5,
         }
-      );
+      )
+      .to(
+        phone_1.current[e],
+        {
+          translateX: -1000,
+          translateY: 400,
+          opacity: 1,
+          duration: 2,
+          rotateZ: -405,
+        }
+      )
+      // .to(
+      //   logoRef.current,
+      //   {
+      //     width: 250,
+      //     duration: 1,
+      //   },
+      // )
+      // .fromTo(
+      //   logoTextRef.current,
+      //   {
+      //     opacity: 0,
+      //     duration: 1,
+      //   },
+      //   {
+      //     opacity: 1,
+      //     duration: 1,
+      //   },
+      // )
+      ;
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
       start: "bottom bottom",
-      end: "250%",
+      end: "220%",
       scrub: 0,
       animation: revealPhoneTimeline,
     })
@@ -165,7 +204,7 @@ const Logo = () => {
   }
 
   return (
-    <div ref={wrapperRef} className="text-center relative h-[100vh] w-[100vw] flex justify-center items-center">
+    <div ref={wrapperRef} className="text-center relative h-[100vh] w-[100vw] flex flex-col justify-center items-center">
       <div ref={logoRef} id="rotatingCenter_owl" className="z-50 object-cover w-[200px]">
         <Image
           src="/logo.svg"
@@ -175,17 +214,17 @@ const Logo = () => {
           className="m-auto"
         />
       </div>
-      {/* <div id="logo-text" className=" mx-auto  mb-[120px]">
+      <div ref={logoTextRef} id="logo-text" className="absolute mx-auto  mb-[120px]">
         <Image
-            src="/logo_txt_only.svg"
-            alt="Purple "
-            width={476}
-            height={200}
-            className="m-auto"
+          src="/logo_txt_only.svg"
+          alt="Purple "
+          width={476}
+          height={200}
+          className="m-auto"
         />
-      </div> */}
+      </div>
       {[...Array(8)].map((_, index) => (
-        <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className="z-40 absolute inset-0 top-[10px] transform rotate-45">
+        <div key={index} ref={(ref) => (phone_1.current[index] = ref)} className="z-40 inset-0 absolute ">
           <Image
             src="/screenshot/map 3.png"
             alt="Logo Phone"

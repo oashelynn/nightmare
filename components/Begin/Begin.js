@@ -110,7 +110,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		const scrollTrigger = ScrollTrigger.create({
 			trigger: wrapperRef.current,
 			start: "bottom bottom",
-			end: `230%`,
+			end: `350%`,
 			scrub: 0,
 			pin: true,
 			animation: stopPhone,
@@ -136,7 +136,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		const scrollTrigger = ScrollTrigger.create({
 			trigger: wrapperRef.current,
 			start: "bottom bottom",
-			end: "20%",
+			end: "35%",
 			scrub: 0,
 			animation: hidingTopText,
 		});
@@ -199,7 +199,7 @@ const Begin = ({ isDesktop, clientHeight }) => {
 		const scrollTrigger = ScrollTrigger.create({
 			trigger: wrapperRef.current,
 			start: "bottom bottom",
-			end: "250%",
+			end: "350%",
 			scrub: 0,
 			animation: revealsideText,
 		});
