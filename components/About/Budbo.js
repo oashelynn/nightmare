@@ -45,7 +45,7 @@ export default function Budbo() {
   }
 
   return (
-    <div ref={wrapperRef} className="w-[100vw] h-[100vh] overflow-hidden flexx flex-col text-center font-sysui">
+    <div ref={wrapperRef} className="w-[100vw] h-[100vh] overflow-hidden flexx flex-col text-center font-sysui pt-24">
       <h1 className="text-[60px]">
         <span>
           We are
@@ -59,7 +59,7 @@ export default function Budbo() {
         <p className="text-[30px]">‘Tinder’ for buying cannabis? Yea, we did that.</p>
         <p className="text-[30px]">We’ve been expecting you! Join the Revolution, invest today!</p>
       </div>
-      <div className="flex flex-col lg:gap-[108px] gap-4">
+      <div className="flex flex-col lg:gap-[108px] gap-4 mt-10">
         <div ref={imgRef} className="flex lg:gap-[45px] gap-3 items-center justify-center w-[360%]">
           <Image
             src="/about/budbo/Rectangle 120.jpg"

@@ -2,8 +2,61 @@ import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Team from "./Team";
 import Reason2 from "./Reason2";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { Linear } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 const Reason = () => {
+  const superChargeRef = useRef(null);
+  const superChargeTextRef = useRef(null);
+  const superChargeImgRef = useRef(null);
+  const superChargeDescriptionRef = useRef(null);
+
+  useEffect(() => {
+    const [revealSuperImgTimeline, revealSuperImgScrollTrigger] = revealSuperCharge();
+
+    return () => {
+      revealSuperImgScrollTrigger && revealSuperImgScrollTrigger.kill();
+      revealSuperImgTimeline && revealSuperImgTimeline.progress(1);
+    }
+  })
+
+  const revealSuperCharge = () => {
+    const revealSuperTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
+    const halfWidth = superChargeImgRef.current.clientWidth / 2;
+    revealSuperTimeline
+      .from(
+        superChargeTextRef.current,
+        {
+          opacity: 0,
+          duration: 1
+        }
+      )
+      .from(
+        superChargeImgRef.current,
+        {
+          opacity: 0,
+          // width: halfWidth,
+          duration: 1
+        }
+      )
+      .from(
+        superChargeDescriptionRef.current,
+        {
+          opacity: 0,
+          duration: 1
+        }
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: superChargeRef.current,
+      start: "top center",
+      end: "bottom bottom",
+      scrub: 0,
+      animation: revealSuperTimeline
+    });
+    return [revealSuperTimeline, scrollTrigger];
+  }
   return (
     <div className="bg-black xl:py-[100px] xl:px-[300px] py-10 px-6 text-white font-sysui">
       <div className="bg-reason xl:py-[85px] xl:px-[38px]">
@@ -67,11 +120,11 @@ const Reason = () => {
             </button>
           </div>
         </div>
-        <div className="py-[50px]">
-          <h1 className="text-[70px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] my-[40px] lg:text-center">
+        <div ref={superChargeRef} className=" w-full h-[100vh] flex flex-col gap-5">
+          <h1 ref={superChargeTextRef} className="text-[70px] lg:text-[88px] font-semibold leading-none lg:mx-[80px] mt-[40px] lg:text-center p-0">
             Supercharge your portfolio.
           </h1>
-          <div className="absolute top-[24000px] left-[-300px] pointer-events-none -z-1">
+          <div className="absolute translate-y-20">
             <Image
               src="/reason/Ellipse 7.svg"
               alt="ellipse"
@@ -80,25 +133,15 @@ const Reason = () => {
               className="flex m-auto"
             />
           </div>
-          <div className="flex justify-center gap-[30px] my-[84px] relative z-10">
-            {/* <p className="bg-linear bg-clip-text text-transparent text-right pb-[150px]">
-            Patent-pending technologies
-            <br/>
-            175,000 registered users
-          </p> */}
+          <div ref={superChargeImgRef} className="flex justify-center relative z-10 pt-10">
             <Image
               src="/reason/checkout 2.png"
               alt="checkout2"
               width={685}
               height={515}
             />
-            {/* <p className="bg-linear bg-clip-text text-transparent text-left pb-[150px]">
-            Gamified product discovery
-            <br/>
-            Sleek user interface
-          </p> */}
           </div>
-          <div className="text-[22px] lg:p-[135px]">
+          <div ref={superChargeDescriptionRef} className="text-[22px] lg:px-[135px]">
             <span className="bg-linear bg-clip-text text-transparent">289,000,000</span>
             &nbsp;
             <span>patients and recreational users worldwide can now</span>
@@ -106,9 +149,8 @@ const Reason = () => {
             <span className="bg-linear bg-clip-text text-transparent">find, order, and have delivered</span>
             &nbsp;
             <span>
-              <br />
               legal cannabis from 1000s of local dispensaries around the world.
-              <br /><br />
+              <br />
               This is your opportunity to tap into legalized cannabis sales and industry expansion on a massive scale.
             </span>
           </div>
@@ -216,7 +258,6 @@ const Reason = () => {
             Budbo is managed by an incredibly experienced team, with executives from Google, Comcast, NetSpend, Harvard trained doctors, cannabis industry veterans, and seasoned financial executives with extensive merger and acquisition experience as well as IPO/Public exit experience.
           </div>
           <Team />
-          <p className="text-[17px] mt-3 text-center">Battle tested and forged in fire</p>
         </div>
       </div>
       <div className="w-full bg-reason lg:after:py-[85px]">

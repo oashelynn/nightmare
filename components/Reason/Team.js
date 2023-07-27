@@ -1,5 +1,7 @@
 import { Icon } from "@iconify/react";
+import { Linear, gsap } from "gsap";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 
 const members = [
   {
@@ -45,8 +47,27 @@ const members = [
 ]
 
 const Team = () => {
+  const wrapperRef = useRef(null);
+  const teamPhoto = useRef(null);
+  const battleText = useRef(null);
+
+  useEffect(() =>{
+    return () => {
+
+    }
+  })
+  const revealBattleText = () => {
+    const battleTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
+    battleText
+      .to(
+        teamPhoto.current,
+        {
+          opaci
+        }
+      )
+  }
   return (
-    <div className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0 text-center">
+    <div ref={wrapperRef} className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0 text-center">
       {members.map(i =>
         <div key={'client_' + i.file} className="">
           <Image
