@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import gsap, { Power1, Circ } from "gsap";
 import { useRouter } from "next/router";
 import Button from "@/components/Button/Button";
-import Cursor from "@/components/Cursor/Cursor";
 
 const Custom404 = () => {
   const router = useRouter();
