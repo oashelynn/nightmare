@@ -257,7 +257,7 @@ const Reason = () => {
             <br />
             Budbo is managed by an incredibly experienced team, with executives from Google, Comcast, NetSpend, Harvard trained doctors, cannabis industry veterans, and seasoned financial executives with extensive merger and acquisition experience as well as IPO/Public exit experience.
           </div>
-          <Team />
+          <Team battle={true}/>
         </div>
       </div>
       <div className="w-full bg-reason lg:after:py-[85px]">

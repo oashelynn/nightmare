@@ -1,5 +1,6 @@
 import { Icon } from "@iconify/react";
 import { Linear, gsap } from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 
@@ -46,42 +47,69 @@ const members = [
   }
 ]
 
-const Team = () => {
+const Team = ({ battle }) => {
   const wrapperRef = useRef(null);
   const teamPhoto = useRef(null);
   const battleText = useRef(null);
 
-  useEffect(() =>{
+  useEffect(() => {
+    const [togglingTeamImgTimeline, togglingTeamImgTrigger] = revealBattleText();
     return () => {
-
+      togglingTeamImgTrigger && togglingTeamImgTrigger.kill();
+      togglingTeamImgTimeline && togglingTeamImgTimeline.progress(1);
     }
-  })
+  }, [wrapperRef])
   const revealBattleText = () => {
     const battleTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } });
-    battleText
+    battleTimeline
       .to(
         teamPhoto.current,
         {
-          opaci
-        }
+          opacity: 0.5,
+          duration: 1
+        },
+        1
       )
+      .fromTo(
+        battleText.current,
+        {
+          opacity: 0
+        },
+        {
+          opacity: 1,
+          fontSize: 52,
+          duration: 1
+        },
+        "<"
+      );
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: teamPhoto.current,
+      start: "top center",
+      end: "bottom center",
+      scrub: 0,
+      animation: battleTimeline
+    });
+    return [battleTimeline, scrollTrigger];
   }
   return (
-    <div ref={wrapperRef} className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0 text-center">
-      {members.map(i =>
-        <div key={'client_' + i.file} className="">
-          <Image
-            src={`/team/${i.file}.png`}
-            alt="team"
-            width={135}
-            height={140}
-          />
-          <div className="text-[14px] font-semibold leading-[20px] bg-linearblack text-center flex flex-col">
-            <span>{i.name}</span>
-            <span className="text-primary-purple text-[12px]">{i.role}</span>
+    <div ref={wrapperRef} className="relative">
+      <p ref={battleText} className={`z-10 w-full text-[47px] mt-3 text-center absolute ${battle ? 'block' : 'hidden'}`}>Battle tested and forged in fire</p>
+      <div ref={teamPhoto} className="w-full grid grid-cols-4 lg:grid-cols-8 grid-flow-row gap-0 text-center">
+        {members.map(i =>
+          <div key={'client_' + i.file} className="">
+            <Image
+              src={`/team/${i.file}.png`}
+              alt="team"
+              width={135}
+              height={140}
+            />
+            <div className="text-[14px] font-semibold leading-[20px] bg-linearblack text-center flex flex-col">
+              <span>{i.name}</span>
+              <span className="text-primary-purple text-[12px]">{i.role}</span>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
