@@ -14,7 +14,7 @@ import Role from "@/components/About/Role";
 import We from "@/components/About/We";
 import Token from "@/components/About/Token";
 import We1 from "@/components/About/We1";
-import Reason from "@/components/Reason/Reason";
+import Reason from "@/components/Reason/Reason1";
 import Investors from "@/components/Investors/Investors";
 import Future from "@/components/Future/Future";
 import Footer from "@/components/Footer/Footer";
