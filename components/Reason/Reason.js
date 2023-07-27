@@ -201,19 +201,6 @@ const Reason = () => {
           <div className="mx-auto w-[1100px] h-[50px] border-b-[1px] my-[100px] border-secondary-graylight"></div>
         </div>
         <Reason2 />
-        {/* <div className="lg:py-[100px]">
-          <h2 className="text-[32px] font-semibold leading-none lg:px-[156px]">
-            Reason #2 – Budbo is the first holistic ecosystem that touches every stakeholder of the cannabis industry.
-          </h2>
-          <div className="flex justify-center items-start my-[36px]">
-            <Image
-              src="/reason/Table.png"
-              alt="traxchain"
-              width={1120}
-              height={638}
-            />
-          </div>
-        </div> */}
         <div className="py-[100px]">
           <h2 className="text-[32px] font-semibold leading-none lg:px-[156px] text-center mb-[60px]">
             Reason #3 – Exit strategy and exit opportunities.
