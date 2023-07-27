@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import Image from "next/image";
 import Team from "./Team";
+import Reason2 from "./Reason2";
 
 const Reason = () => {
   return (
@@ -199,7 +200,8 @@ const Reason = () => {
           </div>
           <div className="mx-auto w-[1100px] h-[50px] border-b-[1px] my-[100px] border-secondary-graylight"></div>
         </div>
-        <div className="lg:py-[100px]">
+        <Reason2 />
+        {/* <div className="lg:py-[100px]">
           <h2 className="text-[32px] font-semibold leading-none lg:px-[156px]">
             Reason #2 – Budbo is the first holistic ecosystem that touches every stakeholder of the cannabis industry.
           </h2>
@@ -211,7 +213,7 @@ const Reason = () => {
               height={638}
             />
           </div>
-        </div>
+        </div> */}
         <div className="py-[100px]">
           <h2 className="text-[32px] font-semibold leading-none lg:px-[156px] text-center mb-[60px]">
             Reason #3 – Exit strategy and exit opportunities.

@@ -24,7 +24,8 @@ export default function Budbo() {
   const Carousel = () => {
     const carouselTimeline = gsap.timeline({ defaults: { ease: Linear.easeNone } })
     const carouselTextX = imgRef.current.clientWidth - window.innerWidth + 1440
-    const height = wrapperRef.current.clientHeight - phoneRef.current.clientHeight;
+    const height = wrapperRef.current.clientHeight;
+    const percent = window.innerWidth >= 1000 ? "300%" : "600%";
 
     carouselTimeline
       .to(imgRef.current, { x: -(carouselTextX), duration: 1 })
@@ -35,7 +36,7 @@ export default function Budbo() {
     const scrollTrigger = ScrollTrigger.create({
       trigger: wrapperRef.current,
       start: 'bottom bottom',
-      end: '300%',
+      end: percent,
       scrub: 0,
       pin: true,
       animation: carouselTimeline,
