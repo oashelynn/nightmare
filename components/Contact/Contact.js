@@ -346,39 +346,6 @@ const Contact = () => {
           </button>
         </div>
       </div>
-      <style jsx global>{`
-        input,
-        label,
-        textarea {
-          cursor: none;
-        }
-
-        input:hover,
-        textarea:hover {
-          box-shadow: 0 0 0.3rem #7000ff;
-        }
-
-        input:active,
-        input:focus,
-        textarea:active,
-        textarea:focus {
-          box-shadow: 0 0 0.3rem #120e16;
-        }
-
-        input:focus + label,
-        input:valid + label {
-          height: 50%;
-          padding-left: 0;
-          transform: translateY(-100%);
-        }
-
-        textarea:focus + label,
-        textarea:valid + label {
-          height: 17%;
-          padding-left: 0;
-          transform: translateY(-100%);
-        }
-      `}</style>
     </section>
   );
 };

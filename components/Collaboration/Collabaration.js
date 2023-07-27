@@ -73,20 +73,6 @@ const Collaboration = ({ clientHeight }) => {
             .reduce((str, el) => str.concat(el), "")}{" "}
         </p>
       </div>
-      <style jsx global>{`
-        .text-strong {
-          background: linear-gradient(
-            90deg,
-            #ffffff 0%,
-            #ffffff 50%,
-            #8b31ff 51%,
-            #7000ff 102%
-          );
-          background-size: 200% 100%;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-      `}</style>
     </section>
   );
 };
